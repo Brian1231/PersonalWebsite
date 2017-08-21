@@ -1,0 +1,23 @@
+
+
+	*{
+		font-family:Arial;
+		background-color:rgba(160, 181, 214, 0.9);
+		background-position:center center;
+		text-align:center;
+		
+	
+	}
+	a {
+		color: SeaGreen;
+		text-decoration: none;
+	}
+	
+	p{
+		color: Blue;
+		text-decoration: none;
+	}
+
+	img {
+		border-radius: 100%;
+	}
