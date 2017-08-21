@@ -1,0 +1,25 @@
+
+
+	*{
+		background-color:rgba(160, 181, 214, 0.9);
+	}
+	a {
+		color: LightGray;
+	}
+	
+	
+	h1 {
+		color:White
+	}
+
+	p{
+		color: DarkGray;
+	}
+
+	img.profilepic {
+		background-color: powderblue;
+	}
+	
+	.topContainer{
+		background-color: White;
+	}
