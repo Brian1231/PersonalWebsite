@@ -22,7 +22,7 @@
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		height: 700px;
+		height: 100%;
 		width: 100%;
 	}
 	
@@ -68,7 +68,8 @@
 		padding:0;
 		list-style-type: none;
 		display: block;
-		text-align:center;		
+		text-align:center;	
+		white-space:nowrap;
 	}
 	li.topMenu {
 		font-family: 'Lato', sans-serif;
@@ -117,7 +118,7 @@
 		margin: 10px;
 		border-radius: 20%;
 		height: auto;
-		width: 18%;
+		width: 30%;
 	}
 	
 	.topContainer{
@@ -134,8 +135,10 @@
 		position:absolute;
 		top:0px;
 		left:0px;
-		width:80%;
+		width:60%;
 	}
+	
+	/*Footer*/
 	.botContainer{
 		text-align:right;
 		position: fixed;
@@ -148,6 +151,13 @@
 	
 	#footer-text{
 		margin-top:4px;
+	}
+	a.footer-link{
+		color:white;
+	}
+	a.footer-link:hover{
+		color:white;
+		text-decoration:underline;
 	}
 	
 	/* Body fadein values */
