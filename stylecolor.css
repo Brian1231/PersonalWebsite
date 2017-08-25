@@ -4,7 +4,6 @@
 		/*background-color:rgba(160, 181, 214, 0.9);*/
 	}
 	a {
-		color: LightGray;
 	}
 	
 	
@@ -14,11 +13,11 @@
 	
 
 	p{
-		color: DarkGray;
+		color: White;
 	}
 	
 	ul{
-		color: DarkGray;
+		color: White;
 	}
 
 	img.profilepic {
@@ -26,7 +25,8 @@
 	}
 	
 	.topContainer{
-		background-color:rgba(255, 255, 255, 0.7);
+		background-color:rgba(115, 115, 115, 0.7);
+		padding:10px;
 	}
 	
 	.botContainer{
