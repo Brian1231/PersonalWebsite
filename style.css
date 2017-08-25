@@ -32,6 +32,9 @@
 		height: 100%;
 	}
 	
+	h1, h2, p, ul {
+		color:White
+	}
 	/* ==== Header ==== */
 	.heading{
 		text-transform: uppercase;
@@ -107,11 +110,11 @@
 		text-decoration: none;
 		font-family: Montserrat,sans-serif;
 		color:White;
-		margin:10px;
+		margin:15px;
 	}
 	
 	/* ==== Image ==== */
-	img.profilepic {
+	img.profilepic, #mainImage {
 		position:absolute;
 		right:0;
 		top:0;
@@ -119,15 +122,17 @@
 		border-radius: 20%;
 		height: auto;
 		width: 30%;
-	}
+	} 
 	
 	.topContainer{
 		position:relative;
 		margin:auto;
+		padding:10px;
 		width:50%;
 		height:50%;
 		border-top-left-radius:5%;
 		border-top-right-radius:5%;
+		background-color:rgba(115, 115, 115, 0.7);
 	}
 	
 	.textHolder{
@@ -147,6 +152,7 @@
 		right: 0;
 		width: 100%;
 		height:4%;
+		background-color:rgba(26, 209, 255, 1);
 	}
 	
 	#footer-text{
