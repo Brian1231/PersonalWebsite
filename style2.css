@@ -121,11 +121,15 @@
 		cursor:pointer;
 	}
 	
-	p.bodyText{
+	p.bodyText, form{
 		text-decoration: none;
 		font-family: Montserrat,sans-serif;
 		color:rgba(0, 0, 0, 0.5);
 		margin:15px;
+	}
+	mark{
+		color:rgba(247, 17, 232, 1); /*Pink*/
+		background-color:transparent;
 	}
 	ul.skillsList{
 		list-style:none;
@@ -161,7 +165,7 @@
 	
 	.topContainer{
 		position:relative;
-		margin: auto auto 20px auto;
+		margin: auto auto 20px auto;/*top right bot left*/
 		padding:10px;
 		width:40%;
 		height:auto;
