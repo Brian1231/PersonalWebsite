@@ -4,15 +4,21 @@ $(document).ready(function($) {
 	/*Content Swapping*/
 	//Links in nav-bar
 	$('nav li').click(function() {
+		var sectionNumber = $(this).data('rel');
 		$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
 		$(this).addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
-		$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
+		
+		$('section:nth-of-type(' + sectionNumber + ')').siblings('section').fadeOut(400, 'linear');//FadeOut
+		$('section:nth-of-type(' + sectionNumber + ')').delay(400).fadeIn(400, 'linear');//FadeIn
+		//$('section:nth-of-type(' + sectionNumber + ')').fadeIn(400, 'linear').siblings('section').fadeOut(400, 'linear');//FadeIn/Out content
 	});
 	//Links in page
 	$('a').click(function() {
-		$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
+		var sectionNumber = $(this).data('rel');
+		$('section:nth-of-type(' + sectionNumber + ')').siblings('section').fadeOut(400, 'linear');//FadeOut
+		$('section:nth-of-type(' + sectionNumber + ')').delay(400).fadeIn(400, 'linear');//FadeIn
 		$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
-		$('nav li:nth-of-type('+$(this).data('rel')+')').addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
+		$('nav li:nth-of-type('+sectionNumber+')').addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
 	});
 	
 	/*Nav Link hover*/

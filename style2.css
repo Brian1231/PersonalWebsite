@@ -53,7 +53,7 @@
 		font-size: 20px;
 	}
 	
-	/* ==== Menu Bar ==== */
+	/* ==== Nav Bar ==== */
 	
 	nav{
 		-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
@@ -113,6 +113,18 @@
 	}
 	
 	p.bodyText{
+		text-decoration: none;
+		font-family: Montserrat,sans-serif;
+		color:rgba(0, 0, 0, 0.5);
+		margin:15px;
+	}
+	ul.skillsList{
+		text-decoration: none;
+		font-family: Montserrat,sans-serif;
+		color:rgba(0, 0, 0, 0.5);
+		margin:15px;
+	}
+	ul.projectList{
 		text-decoration: none;
 		font-family: Montserrat,sans-serif;
 		color:rgba(0, 0, 0, 0.5);
