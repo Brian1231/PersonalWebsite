@@ -73,24 +73,35 @@
 		text-align:center;	
 		white-space:nowrap;
 	}
-	li.topMenu{
+	.active, li.topMenu:hover {
 		font-family: 'Lato', sans-serif;
 		font-weight:500;
 		text-transform:uppercase;
 		width:auto;	
 		display: inline-block;	
-		background-color: rgba(26, 209, 255, 0.4);
 		color: White;
 		text-align: center;
 		margin:0%;
 		padding: 18px;
 		text-decoration: none;
 		cursor: pointer;
-	}
-	.active, li:hover {
-		outline: 0;
 		background-color: rgba(26, 209, 255, 0.7);
 	}
+	li.topMenu{
+		font-family: 'Lato', sans-serif;
+		font-weight:500;
+		text-transform:uppercase;
+		width:auto;	
+		display: inline-block;	
+		color: White;
+		text-align: center;
+		margin:0%;
+		padding: 18px;
+		text-decoration: none;
+		cursor: pointer;
+		background-color: rgba(26, 209, 255, 0.4);
+	}
+	
 	
 	/* ==== Links in page ==== */
 	a.link{
@@ -98,9 +109,10 @@
 	}
 	a.link:hover{
 		text-decoration: underline;
+		cursor:pointer;
 	}
 	
-	p{
+	p.bodyText{
 		text-decoration: none;
 		font-family: Montserrat,sans-serif;
 		color:rgba(0, 0, 0, 0.5);
@@ -160,6 +172,10 @@
 	#footer-text{
 		margin-top:4px;
 		margin-bottom:4px;
+		margin-right:4px;
+		text-decoration: none;
+		font-family: Montserrat,sans-serif;
+		color:White;
 	}
 	a.footer-link{
 		color:white;

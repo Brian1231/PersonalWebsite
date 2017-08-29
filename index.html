@@ -38,7 +38,7 @@
 	<!-- Menu Bar -->
 	<nav>
 		<ul class="menuList">
-			<li data-rel="1" class = "active topMenu">Hello</li><!--
+			<li data-rel="1" class = "active">Hello</li><!--
 			--><li data-rel="2" class="topMenu">Intro</li><!--
 			--><li data-rel="3" class="topMenu">Projects</li><!--
 			--><li data-rel="4" class="topMenu">Contact</li>
@@ -49,9 +49,9 @@
 	<div class = "topContainer">
 		<section>
 			<div class = "textHolder">
-				<p>Hi! I'm Brian, a Computer Science student studying in <a class="link" href="https://www.ucd.ie" rel="nofollow" target="_blank" onmouseover="ucdImg()" onmouseout="fixImg()">UCD</a>, Dublin, Ireland.</p>
-				<p>I'm in 3rd year at the moment and I'm currently seeking out internship opportunities for the summer of 2018. </p>
-				<p>Have a look at some ot the <a class="link" href="projects.html" rel="nofollow" onmouseover="projectImg()" onmouseout="fixImg()">projects</a> I've done or feel free to <a class="link" href="contact.html" rel="nofollow">contact</a> me.</p>
+				<p class="bodyText">Hi! I'm Brian, a Computer Science student studying in <a class="link" href="https://www.ucd.ie" rel="nofollow" target="_blank" onmouseover="ucdImg()" onmouseout="fixImg()">UCD</a>, Dublin, Ireland.</p>
+				<p class="bodyText">I'm in 3rd year at the moment and I'm currently seeking out internship opportunities for the summer of 2018. </p>
+				<p class="bodyText">Have a look at some ot the <a class="link" data-rel="3" onmouseover="projectImg()" onmouseout="fixImg()">projects</a> I've done or feel free to <a class="link" data-rel="4">contact</a> me.</p>
 		   </div>
 		   <img src = "./imgs/brian_cropped.jpg" alt = "Brian 0'Leary" class = "profilepic" id="mainImage"> 
 		</section>
@@ -63,6 +63,7 @@
 					<li>Algorithms</li>
 					<li>Agile Software Developement</li>
 					<li>Making Lists</li>
+					<li>Finishing Websites</li>
 				</ul>
 		</section>
 		
@@ -85,9 +86,17 @@
 	<!-- content switch -->
 	<script>
 		(function($) {
+			//Links in nav-bar
 			$('nav li').click(function() {
-				$(this).addClass('active').siblings('li').removeClass('active');//Change active tab
+				$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
+				$(this).addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
 				$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
+			});
+			//Links in page
+			$('a').click(function() {
+				$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
+				$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
+				$('nav li:nth-of-type('+$(this).data('rel')+')').addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
 			});
 		})(jQuery);
 	</script>
