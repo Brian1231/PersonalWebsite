@@ -73,7 +73,7 @@
 		text-align:center;	
 		white-space:nowrap;
 	}
-	.active, li.topMenu:hover {
+	.active {
 		font-family: 'Lato', sans-serif;
 		font-weight:500;
 		text-transform:uppercase;
@@ -104,10 +104,10 @@
 	
 	
 	/* ==== Links in page ==== */
-	a.link{
+	#ucdlink, #projects-link, #contacts-link{
 		color:rgba(26, 209, 255, 1);
 	}
-	a.link:hover{
+	#ucdlink:hover, #projects-link:hover, #contacts-link:hover{
 		text-decoration: underline;
 		cursor:pointer;
 	}

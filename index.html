@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Brian O'Leary</title>
+		<title>Brian O'Leary | Computer Science Student</title>
 		
 		<!-- Icons -->
 		<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
@@ -47,15 +47,16 @@
 	
 	<!-- Center Div -->
 	<div class = "topContainer">
+		<!-- HOME -->
 		<section>
 			<div class = "textHolder">
-				<p class="bodyText">Hi! I'm Brian, a Computer Science student studying in <a class="link" href="https://www.ucd.ie" rel="nofollow" target="_blank" onmouseover="ucdImg()" onmouseout="fixImg()">UCD</a>, Dublin, Ireland.</p>
+				<p class="bodyText">Hi! I'm Brian, a Computer Science student studying in <a id="ucdlink" href="https://www.ucd.ie" rel="nofollow" target="_blank">UCD</a>, Dublin, Ireland.</p>
 				<p class="bodyText">I'm in 3rd year at the moment and I'm currently seeking out internship opportunities for the summer of 2018. </p>
-				<p class="bodyText">Have a look at some ot the <a class="link" data-rel="3" onmouseover="projectImg()" onmouseout="fixImg()">projects</a> I've done or feel free to <a class="link" data-rel="4">contact</a> me.</p>
+				<p class="bodyText">Have a look at some ot the <a id="projects-link" data-rel="3">projects</a> I've done or feel free to <a id="contacts-link" data-rel="4">contact</a> me.</p>
 		   </div>
-		   <img src = "./imgs/brian_cropped.jpg" alt = "Brian 0'Leary" class = "profilepic" id="mainImage"> 
+		   <img src = "./imgs/brian_cropped.jpg" alt = "Brian 0'Leary" id="mainImage"> 
 		</section>
-		
+		<!-- INTRO -->
 		<section>
 			<p>Some stuff that I'm good at:</p>
 				<ul>
@@ -66,11 +67,11 @@
 					<li>Finishing Websites</li>
 				</ul>
 		</section>
-		
+		<!-- PROJECTS -->
 		<section>
 			<p>Section 3</p>
 		</section>
-		
+		<!-- CONTACT -->
 		<section>
 			<p>Section 4</p>
 		</section>
@@ -83,22 +84,5 @@
 	
 	<!-- js -->
 	<script src="./scripts.js"></script>
-	<!-- content switch -->
-	<script>
-		(function($) {
-			//Links in nav-bar
-			$('nav li').click(function() {
-				$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
-				$(this).addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
-				$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
-			});
-			//Links in page
-			$('a').click(function() {
-				$('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(400, 'linear');//FadeIn/Out content
-				$('.active').addClass('topMenu').removeClass('active');//Replace active with topMenu in nav-bar
-				$('nav li:nth-of-type('+$(this).data('rel')+')').addClass('active').removeClass('topMenu');//Replace topMenu with active in nav-bar
-			});
-		})(jQuery);
-	</script>
 	</body> 
 </html>
