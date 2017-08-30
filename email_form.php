@@ -8,22 +8,22 @@
 
 <?php
 if(isset($_POST['message'])) {
-	echo "in here<br/>";
+	//echo "in here<br/>";
     $email_to = "brianolearycs@gmail.com";
     $email_subject = "Email from brianoleary.net";
  
     function died($error) {
         // your error code can go here
-        echo "Sorry, something went wrong.";
-        echo "Errors are shown below.<br /><br />";
+        echo "<p>Sorry, something went wrong.</p>";
+        echo "<p>Errors are shown below.<br /><br /></p>";
         echo $error."<br /><br />";
-        echo "Please try again!<br /><br />";
+        echo "<p>Please try again!<br /><br /></p>";
 		echo "<script type=\"text/javascript\">
 				setTimeout(closewindow, 3000)
 				function closewindow(){
 					window.close();
 				}
-			 </script>"
+			 </script>";
         die();
     }
  
