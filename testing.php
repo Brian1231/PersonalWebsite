@@ -5,7 +5,7 @@
 <?php
 echo "Just testing stuff";
 if(isset($_POST['mail'])) {
-	echo "in here";
+	echo "in here<br/>";
 }
 
 	$first_name = $_POST['name']; // required
@@ -15,6 +15,13 @@ if(isset($_POST['mail'])) {
 	echo $first_name;
 	echo $email_from;
 	echo $comments;
+	
+	// send email
+	if(mail("brianolearycs@gmail.com","My subject",$comments)){
+		echo "Email sent!";
+	}else{
+		echo"Something went wrong!";
+	}
 	
 ?> 
 

@@ -3,8 +3,8 @@
 <body>
 
 <?php
-if(isset($_POST['mail'])) {
- 
+if(isset($_POST['message'])) {
+	echo "in here<br/>";
     $email_to = "brianolearycs@gmail.com";
     $email_subject = "Email from brianoleary.net";
  
@@ -17,15 +17,12 @@ if(isset($_POST['mail'])) {
         die();
     }
  
- 
     // validation expected data exists
     if(!isset($_POST['name']) ||
         !isset($_POST['mail']) ||
         !isset($_POST['message'])){
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
- 
-     
  
     $first_name = $_POST['name']; // required
     $email_from = $_POST['mail']; // required
@@ -70,13 +67,18 @@ if(isset($_POST['mail'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
+mail($email_to, $email_subject, $email_message, $headers);  
+?>
+<!--echo "<script>window.close();</script>"; -->
 
-echo "<script>window.close();</script>";
 
-
- 
-Thank you for contacting me.
+ <script type="text/javascript">
+	setTimeout(closewindow, 2000)
+	function closewindow(){
+		window.close();
+	}
+ </script>
+Email sent!
  
 <?php
  
