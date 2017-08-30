@@ -16,7 +16,7 @@ if(isset($_POST['message'])) {
         // your error code can go here
         echo "<p>Sorry, something went wrong.</p>";
         echo "<p>Errors are shown below.<br /><br /></p>";
-        echo $error."<br /><br />";
+        echo "<p id=\"error\">".$error."<br /><br /></p>";
         echo "<p>Please try again!<br /><br /></p>";
 		echo "<script type=\"text/javascript\">
 				setTimeout(closewindow, 3000)
@@ -31,7 +31,7 @@ if(isset($_POST['message'])) {
     if(!isset($_POST['name']) ||
         !isset($_POST['mail']) ||
         !isset($_POST['message'])){
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+        died('Sorry. Did you leave something blank?');       
     }
  
     $first_name = $_POST['name']; // required
@@ -42,17 +42,17 @@ if(isset($_POST['message'])) {
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
  
   if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    $error_message .= 'Invalid email address.<br />';
   }
  
     $string_exp = "/^[A-Za-z .'-]+$/";
  
   if(!preg_match($string_exp,$first_name)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+    $error_message .= 'Invalid Name.<br />';
   }
  
   if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+    $error_message .= 'Invalid message.<br />';
   }
  
   if(strlen($error_message) > 0) {
