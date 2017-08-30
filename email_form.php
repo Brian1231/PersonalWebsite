@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<!-- CSS Style -->
+	<link rel = "stylesheet" type = "text/css" href = "http://brianoleary.net/email_form_style.css">
+</head>
 <body>
 
 <?php
@@ -10,10 +14,16 @@ if(isset($_POST['message'])) {
  
     function died($error) {
         // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
+        echo "Sorry, something went wrong.";
+        echo "Errors are shown below.<br /><br />";
         echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Please try again!<br /><br />";
+		echo "<script type=\"text/javascript\">
+				setTimeout(closewindow, 3000)
+				function closewindow(){
+					window.close();
+				}
+			 </script>"
         die();
     }
  
@@ -62,14 +72,18 @@ if(isset($_POST['message'])) {
     $email_message .= "Name: ".clean_string($first_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
- 
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-mail($email_to, $email_subject, $email_message, $headers);  
+	 
+	// create email headers
+	$headers = 'From: '.$email_from."\r\n".
+	'Reply-To: '.$email_from."\r\n" .
+	'X-Mailer: PHP/' . phpversion();
+
+	if(mail($email_to, $email_subject, $email_message, $headers)){
+		echo "<p>Email sent!<p>";
+	}else{
+		echo "<p>Something went wrong!<p>";
+	}	
 ?>
-<!--echo "<script>window.close();</script>"; -->
 
 
  <script type="text/javascript">
@@ -78,7 +92,7 @@ mail($email_to, $email_subject, $email_message, $headers);
 		window.close();
 	}
  </script>
-Email sent!
+
  
 <?php
  
