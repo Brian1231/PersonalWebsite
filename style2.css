@@ -145,12 +145,6 @@
 		font-size:30px;
 		color:rgba(247, 17, 232, 1); /*Pink*/
 	}
-	ul.projectList{
-		text-decoration: none;
-		font-family: Montserrat,sans-serif;
-		color:rgba(0, 0, 0, 0.5);
-		margin:15px;
-	}
 	
 	/* ==== Image ==== */
 	img.profilepic, #mainImage {
@@ -180,6 +174,37 @@
 		width:60%;
 	}
 	
+	/*Projects*/
+	h3{
+		font-family: Montserrat,sans-serif;
+		color:White;
+		text-decoration:underline;
+		font-weight: 100;
+		font-size: 20px;
+		margin:0px;
+	}
+	.projectImg{
+		position:relative;
+		right:0;
+		top:0;
+		margin: 10px;
+		height: auto;
+		width: 70%;
+	}
+	.projectContainer{
+		background-color:rgba(26, 209, 255, 1); /*Light Blue*/
+		padding:10px ;
+		margin: 10px 0px 10px 0px;
+		border-radius:20px;
+		
+	}
+	p.projectText{
+		text-decoration: none;
+		font-family: Montserrat,sans-serif;
+		color:White;
+		margin:15px;
+	}
+	
 	/*Content swapping*/
 	section{
 		display: none;
@@ -196,7 +221,7 @@
 		right: 0;
 		width: 100%;
 		height:4%;
-		background-color:rgba(26, 209, 255, 1);
+		background-color:rgba(26, 209, 255, 1); /*Light Blue*/
 	}
 	
 	#footer-text{
