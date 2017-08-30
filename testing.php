@@ -4,7 +4,7 @@
 
 <?php
 echo "Just testing stuff";
-if(isset($_POST['email'])) {
+if(isset($_POST['mail'])) {
 	echo "in here";
 }
 

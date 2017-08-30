@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
-if(isset($_POST['email'])) {
+if(isset($_POST['mail'])) {
  
     $email_to = "brianolearycs@gmail.com";
     $email_subject = "Email from brianoleary.net";
@@ -69,7 +73,7 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
 
 echo "<script>window.close();</script>";
-?>
+
 
  
 Thank you for contacting me.
@@ -78,3 +82,6 @@ Thank you for contacting me.
  
 }
 ?>
+
+</body>
+</html>
