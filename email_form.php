@@ -19,7 +19,7 @@ if(isset($_POST['message'])) {
         echo "<p id=\"error\">".$error."<br /><br /></p>";
         echo "<p>Please try again!<br /><br /></p>";
 		echo "<script type=\"text/javascript\">
-				setTimeout(closewindow, 3000)
+				setTimeout(closewindow, 4000)
 				function closewindow(){
 					window.close();
 				}
