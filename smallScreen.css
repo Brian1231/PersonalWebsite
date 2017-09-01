@@ -209,6 +209,34 @@
 		margin:15px;
 	}
 	
+	.formButton{
+		background-color: rgba(247, 17, 232, 1); /*Pink*/
+		color:White;
+		border: none;
+		text-align: center;
+		text-transform:uppercase;
+		text-decoration: none;
+		font-family: Montserrat,sans-serif;
+		font-size: 18px;
+		padding:5px;
+		border-radius: 8px;
+		cursor:pointer;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+	}
+	
+	.formButton:active{
+		 box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
+	
+	.formButton:hover{
+		background-color: rgba(247, 17, 232, 0.5); /*Pink*/
+		cursor:pointer;
+		
+		
+	}
+	
 	/*Content swapping*/
 	section{
 		display: none;
