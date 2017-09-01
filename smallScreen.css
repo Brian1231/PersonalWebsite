@@ -75,8 +75,8 @@
 		width:100%;
 	}
 	ul.menuList{
-		margin:10px 0px 10px 0px;
-		font-size:10px;
+		margin:5px 0px 5px 0px;
+		font-size:15px;
 		padding:0;
 		list-style-type: none;
 		display: block;
@@ -92,7 +92,7 @@
 		color: White;
 		text-align: center;
 		margin:0%;
-		padding: 16px;
+		padding: 14px;
 		text-decoration: none;
 		cursor: pointer;
 		background-color: rgba(26, 209, 255, 0.7);
@@ -106,7 +106,7 @@
 		color: White;
 		text-align: center;
 		margin:0%;
-		padding: 16px;
+		padding: 14px;
 		text-decoration: none;
 		cursor: pointer;
 		background-color: rgba(26, 209, 255, 0.4);
@@ -127,6 +127,7 @@
 		font-family: Montserrat,sans-serif;
 		color:rgba(0, 0, 0, 0.5);
 		margin:15px;
+		font-size:12px;
 	}
 	mark{
 		color:rgba(247, 17, 232, 1); /*Pink*/
@@ -136,8 +137,9 @@
 		list-style:none;
 		text-decoration: none;
 		font-family: Montserrat,sans-serif;
+		font-size:12px;
 		color:rgba(0, 0, 0, 0.5);
-		margin:15px;
+		margin:5px;
 	}
 	li.skill::before{	
 		content:"\2022  "; /*Bullet Point*/
@@ -152,7 +154,7 @@
 		position:absolute;
 		right:0;
 		top:0;
-		margin: 10px;
+		margin: 5px;
 		border-radius: 20%;
 		height: auto;
 		width: 30%;
@@ -160,9 +162,9 @@
 	
 	.topContainer{
 		position:relative;
-		margin: auto auto 20px auto;/*top right bot left*/
-		padding:10px;
-		width:100%;
+		margin: auto auto 10px auto;/*top right bot left*/
+		padding:5px;
+		width:90%;
 		height:auto;
 		/*background-color:rgba(115, 115, 115, 0.7);*/
 	}
