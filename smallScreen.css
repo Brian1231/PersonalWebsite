@@ -13,7 +13,6 @@
 	}
 	*{
 		background-position:center center;
-		background-color:blue;
 	}
 	a {
 		text-decoration: none;
@@ -52,8 +51,8 @@
 		letter-spacing: 1px;
 	}
 	h1 {
-		font-weight: 700;
-		font-size: 80px;
+		font-weight: 400;
+		font-size: 40px;
 		color: rgba(26, 209, 255, 1);/*Light-Blue*/
 	}
 	
@@ -73,7 +72,7 @@
 		animation: fadein 1s;
 		  
 		margin:auto;
-		width:60%;
+		width:100%;
 	}
 	ul.menuList{
 		margin:10;
@@ -162,7 +161,7 @@
 		position:relative;
 		margin: auto auto 20px auto;/*top right bot left*/
 		padding:10px;
-		width:40%;
+		width:100%;
 		height:auto;
 		/*background-color:rgba(115, 115, 115, 0.7);*/
 	}
