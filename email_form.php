@@ -13,7 +13,6 @@ if(isset($_POST['message'])) {
     $email_subject = "Email from brianoleary.net";
  
     function died($error) {
-        // your error code can go here
         echo "<p>Sorry, something went wrong.</p>";
         echo "<p>Errors are shown below.<br /><br /></p>";
         echo "<p id=\"error\">".$error."<br /><br /></p>";
